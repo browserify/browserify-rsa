@@ -1,14 +1,8 @@
 var bn = require('bn.js');
 module.exports = crt;
-// based on https://github.com/google/end-to-end/blob/bd14d9607e742cd94b1a5af39e0f9e8c454b4a32/src/javascript/crypto/e2e/asymmetric/rsa.js#L196
 function blind(priv, crypto) {
-  var mod = bn.mont(priv.modulus);
   var r = getr(priv, crypto);
-  var p = priv.prime1;
-  var q = priv.prime2;
-  var ONE = new bn(1);
-
-  var blinder = r.toRed(mod)
+  var blinder = r.toRed(bn.mont(priv.modulus))
   .redPow(new bn(priv.publicExponent)).fromRed();
   return {
     blinder: blinder,
@@ -17,6 +11,7 @@ function blind(priv, crypto) {
 }
 function crt(msg, priv, crypto) {
   var blinds = blind(priv, crypto);
+  var len = priv.modulus.byteLength();
   var mod = bn.mont(priv.modulus);
   var blinded = new bn(msg).mul(blinds.blinder).mod(priv.modulus);
   var c1 = blinded.toRed(bn.mont(priv.prime1));
@@ -31,9 +26,15 @@ function crt(msg, priv, crypto) {
   var h = m1.isub(m2).imul(qinv).mod(p);
   h.imul(q);
   m2.iadd(h);
-  return new Buffer(m2.imul(blinds.unblinder).mod(priv.modulus).toArray());
+  var out = new Buffer(m2.imul(blinds.unblinder).mod(priv.modulus).toArray());
+  if (out.length < len) {
+    var prefix = new Buffer(len - out.length);
+    prefix.fill(0);
+    out = Buffer.concat([prefix, out], len);
+  }
+  return out;
 }
-
+crt.getr = getr;
 function getr(priv, crypto) {
   var len = priv.modulus.byteLength();
   var r = new bn(crypto.randomBytes(len));
