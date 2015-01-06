@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bn.js": "^0.16.0"
+    "bn.js": "^1.0.0"
   },
   "repository": {
     "type": "git",
