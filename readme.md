@@ -7,4 +7,4 @@ RSA private decryption/signing using chinese remainder and blinding.
 API
 ====
 
-Give it a message as a buffer, a private key (as decoded by https://www.npmjs.com/package/parse-asn1) and a crypto object (aka `require('crypto')`, this is because we use it in browserify crypto and don't want to create a circular dependency)
+Give it a message as a buffer and a private key (as decoded by https://www.npmjs.com/package/parse-asn1) and it returns encrypted data as a buffer.
