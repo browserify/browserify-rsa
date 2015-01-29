@@ -1,6 +1,6 @@
 browserify-rsa
 ====
-[![Build Status](https://travis-ci.org/calvinmetcalf/browserify-rsa.svg)](https://travis-ci.org/calvinmetcalf/browserify-rsa)
+[![Build Status](https://travis-ci.org/crypto-browserify/browserify-rsa.svg)](https://travis-ci.org/crypto-browserify/browserify-rsa)
 
 RSA private decryption/signing using chinese remainder and blinding.
 
