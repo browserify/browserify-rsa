@@ -1,6 +1,6 @@
 {
   "name": "browserify-rsa",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "RSA for browserify",
   "main": "index.js",
   "scripts": {
