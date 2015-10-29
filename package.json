@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bn.js": "^3.0.0",
+    "bn.js": "^4.1.0",
     "randombytes": "^2.0.1"
   },
   "repository": {
@@ -17,8 +17,8 @@
     "url": "git@github.com:calvinmetcalf/browserify-rsa.git"
   },
   "devDependencies": {
+    "parse-asn1": "^5.0.0",
     "tap-spec": "^2.1.2",
-    "tape": "^3.0.3",
-    "parse-asn1": "^4.0.0"
+    "tape": "^3.0.3"
   }
 }
