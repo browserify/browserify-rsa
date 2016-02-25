@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:calvinmetcalf/browserify-rsa.git"
+    "url": "git@github.com:crypto-browserify/browserify-rsa.git"
   },
   "devDependencies": {
     "parse-asn1": "^5.0.0",
