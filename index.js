@@ -9,10 +9,10 @@ function blind (priv) {
 
 function getr (priv) {
   var len = priv.modulus.byteLength()
-  var r = new BN(randomBytes(len))
-  while (r.cmp(priv.modulus) >= 0 || !r.umod(priv.prime1) || !r.umod(priv.prime2)) {
+  var r
+  do {
     r = new BN(randomBytes(len))
-  }
+  } while (r.cmp(priv.modulus) >= 0 || !r.umod(priv.prime1) || !r.umod(priv.prime2))
   return r
 }
 
