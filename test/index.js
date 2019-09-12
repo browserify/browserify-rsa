@@ -6,7 +6,7 @@ var tape = require('tape')
 var crt = require('../')
 
 require('./fixtures').forEach(function (fixture, i) {
-  var key = new Buffer(fixture, 'hex')
+  var key = Buffer.from(fixture, 'hex')
   var priv = parseKey(key)
 
   for (var j1 = 1; j1 < 31; ++j1) {
@@ -26,7 +26,7 @@ require('./fixtures').forEach(function (fixture, i) {
       } while (r.cmp(priv.modulus) >= 0)
       var buf = r.toArrayLike(Buffer, 'be')
       if (buf.byteLength < priv.modulus.byteLength()) {
-        var tmp = new Buffer(priv.modulus.byteLength() - buf.byteLength)
+        var tmp = Buffer.alloc(priv.modulus.byteLength() - buf.byteLength)
         tmp.fill(0)
         buf = Buffer.concat([tmp, buf])
       }
