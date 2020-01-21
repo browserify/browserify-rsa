@@ -20,7 +20,7 @@
     "unit": "tape test/*.js"
   },
   "dependencies": {
-    "bn.js": "^5.0.0",
+    "bn.js": "^5.1.1",
     "randombytes": "^2.0.1"
   },
   "devDependencies": {
