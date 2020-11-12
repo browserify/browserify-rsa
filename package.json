@@ -1,6 +1,6 @@
 {
   "name": "browserify-rsa",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "RSA for browserify",
   "bugs": {
     "url": "https://github.com/crypto-browserify/browserify-rsa/issues"
