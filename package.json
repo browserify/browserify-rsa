@@ -20,12 +20,12 @@
     "unit": "tape test/*.js"
   },
   "dependencies": {
-    "bn.js": "^5.0.0",
-    "randombytes": "^2.0.1"
+    "bn.js": "^5.1.3",
+    "randombytes": "^2.1.0"
   },
   "devDependencies": {
-    "parse-asn1": "^5.0.0",
+    "parse-asn1": "5.1.0",
     "standard": "^6.0.8",
-    "tape": "^4.5.1"
+    "tape": "^5.1.1"
   }
 }
