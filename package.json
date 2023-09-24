@@ -12,7 +12,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com:crypto-browserify/browserify-rsa.git"
+    "url": "https://github.com/crypto-browserify/browserify-rsa.git"
   },
   "scripts": {
     "lint": "standard",
