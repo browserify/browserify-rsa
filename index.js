@@ -1,5 +1,6 @@
 var BN = require('bn.js')
 var randomBytes = require('randombytes')
+var Buffer = require('safe-buffer').Buffer
 
 function blind (priv) {
   var r = getr(priv)
