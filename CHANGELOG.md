@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v4.1.1](https://github.com/browserify/browserify-rsa/compare/v4.1.0...v4.1.1) - 2024-09-26
+
+### Commits
+
+- Only apps should have lockfiles [`9d8732b`](https://github.com/browserify/browserify-rsa/commit/9d8732b17f25a24aa1c367bf244c1e95f3a4c485)
+- [eslint] switch to eslint [`7e391c4`](https://github.com/browserify/browserify-rsa/commit/7e391c4dec3407ca1a7af4284f2c5f8c4a745ff2)
+- [meta] add `auto-changelog` [`2e3fdef`](https://github.com/browserify/browserify-rsa/commit/2e3fdeff72d0695b7d9b4b6dc056404ad1d9da96)
+- [Tests] migrate from travis to GHA [`9d29368`](https://github.com/browserify/browserify-rsa/commit/9d29368f3b76a808cc7575533b135b113c96a219)
+- [Tests] improve test organization [`21b8fe5`](https://github.com/browserify/browserify-rsa/commit/21b8fe58085fed8f0b8bd2f111f25079152fa905)
+- [Tests] `crypto.privateDecrypt` is only in node 0.12+ [`52a4253`](https://github.com/browserify/browserify-rsa/commit/52a4253a5f5b19401bab450f2f29e68480c56077)
+- [meta] add `npmignore` and `safe-publish-latest` [`bd5d1c2`](https://github.com/browserify/browserify-rsa/commit/bd5d1c222daafeb2121b2b79b8feb536b565f4e7)
+- [Fix] use `safe-buffer` [`28d2560`](https://github.com/browserify/browserify-rsa/commit/28d256045487adb3b88f7b958fa6728702f9f4f6)
+- [meta] add `exports` [`50464d7`](https://github.com/browserify/browserify-rsa/commit/50464d70d37a1c771268cd336de6424eafa4f42d)
+- [Deps] update `bn.js`, `randombytes` [`d833e49`](https://github.com/browserify/browserify-rsa/commit/d833e49e520f502cf8dfce1fe159041b6a1c6005)
+- [meta] raise `engines.node` to 0.10, due to `parse-asn1` [`063d27b`](https://github.com/browserify/browserify-rsa/commit/063d27b4476dd7d833a57014cf9c6c786005c5dd)
+- [Dev Deps] update `parse-asn1`, `tape` [`7d19782`](https://github.com/browserify/browserify-rsa/commit/7d197823631bcb274efe52970af0f42188b9b7fe)
+- [meta] add missing `engines.node` [`a2e5e94`](https://github.com/browserify/browserify-rsa/commit/a2e5e9411b902439afb1fd9e61d853469a6d1a59)
+- [meta] correct git URL [`f235983`](https://github.com/browserify/browserify-rsa/commit/f23598305d24c2fb1c76f582b1cb22ffba20f374)
+- [Dev Deps] add missing deps from 2e3fdef [`5ea31da`](https://github.com/browserify/browserify-rsa/commit/5ea31da9edf0ec7788c0361bc1a8a90b040f6fe2)
+- [meta] add `sideEffects` flag [`4a2d873`](https://github.com/browserify/browserify-rsa/commit/4a2d8730ea1725651103b0970a6af0b3871fd9be)
+
 ## [v4.1.0](https://github.com/browserify/browserify-rsa/compare/v4.0.1...v4.1.0) - 2020-11-12
 
 ### Merged
